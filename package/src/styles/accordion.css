@@ -1,0 +1,25 @@
+#accordion .trigger{
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+#accordion .trigger::after{
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  transform: rotate(90deg) scale(0.5, 1);
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+#accordion .trigger.active::after{
+  transform: rotate(-90deg) scale(0.5, 1);
+}
+#accordion .content{
+  display: none;
+  padding-top: 10px;
+}
+#accordion .content.active{
+  display: block;
+}

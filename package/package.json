@@ -1,0 +1,36 @@
+{
+  "name": "super-simple-ui-components",
+  "version": "1.0.0",
+  "description": "A zero dependency, minimally styled set of vanilla Javascript components, in a tree shakable libray. Built in my spare time as a learning opportunity and technical demonstration. Available to use in your front end.",
+  "main": "dist/bundle.esm.min.js",
+  "module": "dist/bundle.esm.min.js",
+  "browser": "dist/bundle.umd.min.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "Accordion",
+    "Popup",
+    "Tabs",
+    "Toast",
+    "Tooltip"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephmasongsong/super-simple-ui.git"
+  },
+  "author": "Joseph Masongsong",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "node-sass": "^7.0.1",
+    "rollup": "^2.64.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "files": [
+    "dist"
+  ]
+}

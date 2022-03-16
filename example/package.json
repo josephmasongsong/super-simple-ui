@@ -1,0 +1,42 @@
+{
+  "name": "super-simple-ui-example",
+  "version": "1.0.0",
+  "description": "A zero dependency, minimally styled set of vanilla Javascript components, in a tree shakable libray. Built in my spare time as a learning opportunity and technical demonstration. Available to use in your front end.",
+  "main": "dist/main.bundle.js",
+  "scripts": {
+    "dev": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [
+    "Accordion",
+    "Popup",
+    "Tabs",
+    "Toast",
+    "Tooltip"
+  ],
+  "author": "Joseph Masongsong",
+  "license": "ISC",
+  "dependencies": {
+    "super-simple-ui-components": "1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.3.1",
+    "mini-css-extract-plugin": "^2.4.6",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "sass-loader": "^12.4.0",
+    "tailwindcss": "^3.0.13",
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

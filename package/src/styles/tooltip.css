@@ -1,0 +1,86 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+.tip {
+  width: max-content;
+  font-size: 0.875rem;
+  visibility: hidden;
+  background: #000;
+  color: #fff;
+  float: left;
+  padding: 6px;
+  border-radius: 4px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tip::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(51, 51, 51, 0.19);
+}
+
+.tip.bottom {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tip.bottom::after {
+  border-color: black transparent;
+  border-width: 0 4px 6px 4px;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tip.top {
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.tip.top::after {
+  border-color: black transparent;
+  border-width: 6px 4px 0 4px;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tip.left {
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tip.left::after {
+  border-color: transparent black;
+  border-width: 4px 0 4px 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -6px;
+}
+
+.tip.right {
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tip.right::after {
+  border-color: transparent black;
+  border-width: 4px 6px 4px 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -6px;
+}
+
+.tip.active {
+  visibility: visible;
+  opacity: 1;
+}

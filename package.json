@@ -1,0 +1,23 @@
+{
+  "name": "super-simple-ui",
+  "version": "1.0.0",
+  "description": "A zero dependency, minimally styled set of vanilla Javascript components, in a tree shakable libray. Built in my spare time as a learning opportunity and technical demonstration. Available to use in your front end.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build --workspace package & npm run dev --workspace example",
+    "build": "npm run build --workspace package & npm run build --workspace example"
+  },
+  "keywords": [
+    "Accordion",
+    "Popup",
+    "Tabs",
+    "Toast",
+    "Tooltip"
+  ],
+  "author": "Joseph Masongsong",
+  "license": "ISC",
+  "workspaces": [
+    "example",
+    "package"
+  ]
+}

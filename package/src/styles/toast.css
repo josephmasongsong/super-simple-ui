@@ -1,0 +1,76 @@
+.toast {
+  position: fixed;
+  padding: 20px;
+  border-radius: 4px;
+
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.toast.alert {
+  background: #ff0000;
+  color: #fff;
+}
+
+.toast.success {
+  background: #088000;
+  color: #fff;
+}
+
+.toast.warn {
+  background: #ffff00;
+  color: #000000;
+}
+
+.toast.info {
+  background: #87ceeb;
+  color: #000000;
+}
+
+.toast.top.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast.top.left {
+  left: 0;
+  margin-left: 16px;
+}
+
+.toast.top.right {
+  right: 0;
+  margin-right: 16px;
+}
+
+.toast.top {
+  top: 0;
+  margin-top: -100%;
+}
+
+.toast.top.active, .toast.top.left.active, .toast.top.right.active {
+  margin-top: 16px;
+}
+
+.toast.bottom.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast.bottom.left {
+  left: 0;
+  margin-left: 16px;
+}
+
+.toast.bottom.right {
+  right: 0;
+  margin-right: 16px;
+}
+
+.toast.bottom {
+  bottom: 0;
+  margin-bottom: -100%;
+}
+
+.toast.bottom.active, .toast.bottom.left.active, .toast.bottom.right.active {
+  margin-bottom: 16px;
+}
