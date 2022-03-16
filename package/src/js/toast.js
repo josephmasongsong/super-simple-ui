@@ -1,15 +1,15 @@
 import '../styles/toast.css';
 
 class Toast {
-  constructor(message, options = {}){
+  constructor(message, options = {}) {
     this.message = message;
     this.options = options;
     this.trigger = document.getElementById('toast-trigger');
     this.toast = document.createElement('div');
   }
-  init(){
+  init() {
     const { position, timeout, style } = this.options;
-    const positions = position.split(" ");
+    const positions = position.split(' ');
 
     this.toast.classList.add('toast', style, ...positions);
     document.querySelector('body').appendChild(this.toast);
@@ -19,10 +19,10 @@ class Toast {
       this.toast.classList.add('active');
       setTimeout(() => {
         this.toast.classList.remove('active');
-      }, timeout)
-    })
+      }, timeout);
+    });
   }
-  show(){
+  show() {
     this.toast.textContent = this.message;
     this.toast.classList.add('active');
     setTimeout(() => {
@@ -31,4 +31,4 @@ class Toast {
   }
 }
 
-export { Toast }
+export { Toast };
