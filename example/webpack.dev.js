@@ -7,17 +7,13 @@ module.exports = merge(common, {
   watch: true,
   plugins: [
     new BrowserSyncPlugin({
-      files: [
-        '**/*.html',
-        '**/*scss',
-        '**/*.js'
-      ],
+      files: ['**/*.html', '**/*scss', '**/*.js'],
       host: 'localhost',
       port: 3000,
       injectChanges: true,
       server: {
-        baseDir: ['./']
-      }
-    })
-  ]
+        baseDir: ['./'],
+      },
+    }),
+  ],
 });
