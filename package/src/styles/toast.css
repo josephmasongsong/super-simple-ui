@@ -47,7 +47,9 @@
   margin-top: -100%;
 }
 
-.toast.top.active, .toast.top.left.active, .toast.top.right.active {
+.toast.top.active,
+.toast.top.left.active,
+.toast.top.right.active {
   margin-top: 16px;
 }
 
@@ -71,6 +73,8 @@
   margin-bottom: -100%;
 }
 
-.toast.bottom.active, .toast.bottom.left.active, .toast.bottom.right.active {
+.toast.bottom.active,
+.toast.bottom.left.active,
+.toast.bottom.right.active {
   margin-bottom: 16px;
 }
