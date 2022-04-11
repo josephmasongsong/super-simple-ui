@@ -1,14 +1,4 @@
-import './prism-material-dark.css';
-import './main.css';
-import 'super-simple-ui-components/dist/bundle.min.css';
-
-import {
-  Accordion,
-  Popup,
-  Tabs,
-  Toast,
-  Tooltip,
-} from 'super-simple-ui-components';
+const { Accordion, Popup, Toast, Tooltip, Tabs } = simpleUI;
 
 const accordion = new Accordion('#accordion');
 accordion.init();
@@ -36,4 +26,4 @@ tooltip.init();
 const tabs = new Tabs('.tabs');
 tabs.init();
 
-console.log('this is super simple ui esm');
+console.log('this is super simple ui umd');

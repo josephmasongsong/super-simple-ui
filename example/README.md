@@ -7,12 +7,16 @@ npm install super-simple-ui-components
 ```
 ```js
 /*
- * In your Javascript file, import the components you'll need
+ * In your Javascript file, import the CSS and the components you'll need
  * Available components: Accordion, Popup, Tabs, Toast, Tooltip
  */
-import { Accordion, Tooltip } from 'super-simple-ui-components';
+import 'super-simple-ui-components/dist/bundle.min.css';
+import { Accordion } from 'super-simple-ui-components';
+
+const accordion = new Accordion('#accordion');
+accordion.init();
 ```
-### Using Script tag
+### Using Script/CDN
 ```html
 <!-- In your project <head> -->
 <link href="bundle.min.css" rel="stylesheet">
@@ -20,4 +24,8 @@ import { Accordion, Tooltip } from 'super-simple-ui-components';
 ```html
 <!-- Before the closing </body> tag -->
 <script src="bundle.umd.min.js" ></script>
+<script>
+  const accordion = new simpleUI.Accordion('#accordion');
+  accordion.init();
+</script>
 ```
