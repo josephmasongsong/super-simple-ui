@@ -1,6 +1,9 @@
+#accordion {
+  background-color: rgb(229, 231, 235);
+}
+
 #accordion .trigger {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 1rem;
   position: relative;
   cursor: pointer;
 }
@@ -8,7 +11,7 @@
   content: '>';
   display: inline-block;
   position: absolute;
-  right: 0px;
+  right: 16px;
   transform: rotate(90deg) scale(0.5, 1);
   font-weight: bold;
   transition: transform 0.3s;
@@ -22,4 +25,6 @@
 }
 #accordion .content.active {
   display: block;
+  padding: 1rem;
+  background-color: rgb(243, 244, 246);
 }

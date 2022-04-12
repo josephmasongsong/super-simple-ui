@@ -1,5 +1,5 @@
 import './prism-material-dark.css';
-import './main.css';
+import './main.scss';
 import 'super-simple-ui-components/dist/bundle.min.css';
 
 import {
@@ -35,5 +35,3 @@ tooltip.init();
 
 const tabs = new Tabs('.tabs');
 tabs.init();
-
-console.log('this is super simple ui esm');

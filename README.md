@@ -1,1 +1,2 @@
 # Super Simple UI
+This is the monorepo for the Super Simple UI component library package and documentation site. Super Simple UI is a tree shakeable, dependency-free, minimally styled vanilla Javascript component UI library I made to practice front-end.

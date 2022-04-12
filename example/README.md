@@ -1,31 +1,144 @@
-# Super Simple UI Example
+# Super Simple UI
+A ridiculously simple, tree shakeable, dependency free, vanilla javascript UI component package, that I built in my spare time as practice.
+
 ## Getting Started
-### Using NPM
+
+### Install using a package manager
+Install the package as a dependency in your project.
 ```bash
-# In your project root
 npm install super-simple-ui-components
 ```
+In your Javascript file import the css and any components you will need from the package.
 ```js
-/*
- * In your Javascript file, import the CSS and the components you'll need
- * Available components: Accordion, Popup, Tabs, Toast, Tooltip
- */
 import 'super-simple-ui-components/dist/bundle.min.css';
 import { Accordion } from 'super-simple-ui-components';
 
 const accordion = new Accordion('#accordion');
 accordion.init();
 ```
-### Using Script/CDN
+### Install using &lt;script> tag or CDN
+To use the package in the browser via script tag, you can download the minified script through GitHub or use the CDN.
 ```html
 <!-- In your project <head> -->
-<link href="bundle.min.css" rel="stylesheet">
-```
-```html
+<link href="/path/to/bundle.min.css" rel="stylesheet">
+
 <!-- Before the closing </body> tag -->
-<script src="bundle.umd.min.js" ></script>
+<script src="/path/to/bundle.umd.min.js"></script>
 <script>
-  const accordion = new simpleUI.Accordion('#accordion');
+  const { Accordion } = simpleUI;
+  const accordion = new Accordion('#accordion');
   accordion.init();
 </script>
+```
+## Documentation
+The library is minimally styled and limited in options. Below is the required HTML markup and Javascript needed to use each component. To alter the appearance, override the CSS with your own classes.
+### Accordion
+#### Markup
+The wrapper id of 'accordion' is required to be passed to the instance. The trigger class also requires a data-target attribute that corresponds to the id of the content class div.
+```html
+<div id="accordion">
+  <div>
+    <div data-target="#tab1" class="trigger">Tab 1</div>
+    <div id="tab1" class="content">
+      <!-- tab 1 content -->
+    </div>
+  </div>
+  <div>
+    <div data-target="#tab2" class="trigger">Tab 2</div>
+    <div id="tab2" class="content">
+      <!-- tab 2 content -->
+    </div>
+  </div>
+  <div>
+    <div data-target="#tab3" class="trigger">Tab 3</div>
+    <div id="tab3" class="content">
+      <!-- tab 3 content -->
+    </div>
+  </div>
+</div>
+```
+```js
+const accordion = new Accordion('#accordion');
+accordion.init();
+```
+### Popup
+#### Markup
+The ids and HTML markup are required as shown.
+```html
+<div id="popup-wrapper">
+  <div id="popup">
+    <div id="popup-close">x</div>
+    <div>
+      <!-- popup content -->
+    </div>
+  </div>
+</div>
+
+<a href="#/" id="popup-open">Click me</a>
+```
+#### Javascript
+The available options:
+```js
+onst options = {
+  maxWidth: '600px',
+  opacity: '0.85'
+}
+
+const popup = new Popup('#popup-wrapper', options);
+popup.init();
+```
+### Toast
+#### Markup
+The id `toast-trigger` is required.
+#### Javascript
+Options for position include:  top center, top left, top right, and bottom center, bottom left, bottom right. The available options for style are: alert, success, warn and info.
+```js
+const message = "Download Simple UI Kit as package on NPM!";
+
+const options = {
+  style: 'success',
+  position: 'top center',
+  timeout: 4000
+}
+
+const toast = new Toast(message, options);
+toast.init();
+```
+### Tooltip
+#### Markup
+The `tooltip` class and `data-message` attribute are required.
+```html
+<span class="tooltip" data-message="This is a tooltip!">What's a tooltip?</span>
+```
+#### Javascript
+There is only one option for the tooltip and that is position. Values for position include: top, bottom, left and right.
+```js
+const tooltip = new Tooltip ('.tooltip', { position: 'right' });
+tooltip.init();
+```
+### Tabs
+#### Markup
+The wrapper class 'tabs' is required to be passed to the instance. The trigger class also requires a data-target attribute that corresponds to the id of the content class div.
+```html
+<div class="tabs">
+  <ul>
+    <li class="trigger active" data-target="#tab1">Tab 1</li>
+    <li class="trigger" data-target="#tab2">Tab 2</li>
+    <li class="trigger" data-target="#tab3">Tab 3</li>
+  </ul>
+  <div id="tab1" class="content active">
+    <!-- tab 1 content -->
+  </div>
+  <div id="tab2" class="content">
+    <!-- tab 2 content -->
+  </div>
+  <div id="tab3" class="content">
+    <!-- tab 3 content -->
+  </div>
+</div>
+```
+#### Javascript
+```js
+const tabs = new Tabs('.tabs');
+tabs.init();
 ```

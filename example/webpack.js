@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 module.exports = {
   entry: {
     main: './src/main.js',
-    browser: './src/main.umd.js',
   },
   output: {
     filename: '[name].bundle.js',
