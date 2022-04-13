@@ -50,16 +50,16 @@
         </code>
       </pre>
 
-      <h3 class="mt-6">Install using &lt;script> tag or CDN</h3>
+      <h3 class="mt-6">Install using &lt;script> tag / CDN</h3>
       <p class="mt-2">To use the package in the browser via script tag, you can download the minified script through GitHub or use the CDN.</p>
 
       <pre>
         <code class="language-markup">
           &lt;!-- In your project &lt;head> -->
-          &lt;link href="/path/to/bundle.min.css" rel="stylesheet">
+          &lt;link href="https://unpkg.com/super-simple-ui-components@1.0.1/dist/bundle.min.css" rel="stylesheet">
+          &lt;script src="https://unpkg.com/super-simple-ui-components@1.0.1/dist/bundle.umd.min.js">&lt;/script>
 
-          &lt;!-- Before the closing &lt;/body> tag -->
-          &lt;script src="/path/to/bundle.umd.min.js">&lt;/script>
+          &lt;!-- In your Javascript -->
           &lt;script>
             const { Accordion } = simpleUI;
             const accordion = new Accordion('#accordion');

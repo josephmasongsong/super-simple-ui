@@ -16,14 +16,14 @@ import { Accordion } from 'super-simple-ui-components';
 const accordion = new Accordion('#accordion');
 accordion.init();
 ```
-### Install using &lt;script> tag or CDN
+### Install using &lt;script> tag / CDN
 To use the package in the browser via script tag, you can download the minified script through GitHub or use the CDN.
 ```html
 <!-- In your project <head> -->
-<link href="/path/to/bundle.min.css" rel="stylesheet">
+<link href="https://unpkg.com/super-simple-ui-components@1.0.1/dist/bundle.min.css" rel="stylesheet">
+<script src="https://unpkg.com/super-simple-ui-components@1.0.1/dist/bundle.umd.min.js"></script>
 
-<!-- Before the closing </body> tag -->
-<script src="/path/to/bundle.umd.min.js"></script>
+<!-- In your Javascript -->
 <script>
   const { Accordion } = simpleUI;
   const accordion = new Accordion('#accordion');
@@ -61,6 +61,7 @@ The wrapper id of 'accordion' is required to be passed to the instance. The trig
 const accordion = new Accordion('#accordion');
 accordion.init();
 ```
+See it in action on [Codesandbox](https://codesandbox.io/s/accordion-50pnef).
 ### Popup
 #### Markup
 The ids and HTML markup are required as shown.
@@ -87,6 +88,7 @@ onst options = {
 const popup = new Popup('#popup-wrapper', options);
 popup.init();
 ```
+See it in action on [Codesandbox](https://codesandbox.io/s/popup-d51ou7).
 ### Toast
 #### Markup
 The id `toast-trigger` is required.
@@ -104,6 +106,7 @@ const options = {
 const toast = new Toast(message, options);
 toast.init();
 ```
+See it in action on [Codesandbox](https://codesandbox.io/s/toast-2shzt1).
 ### Tooltip
 #### Markup
 The `tooltip` class and `data-message` attribute are required.
@@ -116,6 +119,7 @@ There is only one option for the tooltip and that is position. Values for positi
 const tooltip = new Tooltip ('.tooltip', { position: 'right' });
 tooltip.init();
 ```
+See it action on [Codesandbox](https://codesandbox.io/s/tooltip-jnelp1)
 ### Tabs
 #### Markup
 The wrapper class 'tabs' is required to be passed to the instance. The trigger class also requires a data-target attribute that corresponds to the id of the content class div.
@@ -142,3 +146,4 @@ The wrapper class 'tabs' is required to be passed to the instance. The trigger c
 const tabs = new Tabs('.tabs');
 tabs.init();
 ```
+See it in action on [Codesandbox](https://codesandbox.io/s/tabs-1kriku).
