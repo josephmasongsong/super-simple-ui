@@ -15,20 +15,31 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>Super Simple UI Component Library</title>
   </head>
-  <body>
+  <body class="px-4 lg:px-0">
     <main>
-      <nav class="flex justify-between pb-6 border-b mb-6">
-        <a class="text-2xl font-semibold" href="/">Super Simple UI</a>
-        <div>
-          <a class="px-4 border-r" href="/"><span class="underline text-blue-700">Home</span></a>
-          <a class="px-4 border-r" href="/docs.html"><span>Docs</span></a>
-          <a class="px-4" href="https://github.com/josephmasongsong/super-simple-ui" target="_blank"><span class="underline text-blue-700">GitHub</span></a>
+      <nav class="mb-6 flex flex-col justify-between border-b pb-6 lg:flex-row">
+        <a class="text-center text-2xl font-semibold" href="/"
+          >Super Simple UI</a
+        >
+        <div class="mx-auto mt-4 lg:ml-auto lg:mr-0 lg:mt-0">
+          <a class="border-r pr-4" href="/"
+            ><span class="text-blue-700 underline">Home</span></a
+          >
+          <a class="border-r px-4" href="/docs.html"><span>Docs</span></a>
+          <a
+            class="pl-4"
+            href="https://github.com/josephmasongsong/super-simple-ui"
+            target="_blank"
+            ><span class="text-blue-700 underline">GitHub</span></a
+          >
         </div>
       </nav>
 
       <h1>Documentation</h1>
       <p class="mt-2">
-        The library is minimally styled and limited in options. Below is the required HTML markup and Javascript needed to use each component. To alter the appearance, override the CSS with your own classes.
+        The library is minimally styled and limited in options. Below is the
+        required HTML markup and Javascript needed to use each component. To
+        alter the appearance, override the CSS with your own classes.
       </p>
 
       <h2 class="mt-4">Accordion</h2>
@@ -49,8 +60,8 @@
 
       <h4 class="mt-4">Markup</h4>
       <p>
-        The wrapper id of 'accordion' is required to be passed to the instance. The
-        trigger class also requires a data-target attribute that corresponds
+        The wrapper id of 'accordion' is required to be passed to the instance.
+        The trigger class also requires a data-target attribute that corresponds
         to the id of the content class div.
       </p>
       <script type="text/plain" class="language-markup mt-4">
@@ -92,14 +103,19 @@
             <p>
               A zero dependency, minimally styled set of vanilla Javascript
               components, in a tree shakable libray. A technical demonstration
-              and learning opportunity, built in my spare time. Available to
-              use in your front end.
+              and learning opportunity, built in my spare time. Available to use
+              in your front end.
             </p>
           </div>
         </div>
       </div>
 
-      <a href="#/" id="popup-open" class="mt-4 rounded bg-blue-700 px-4 py-2 text-white inline-block">Click me</a>
+      <a
+        href="#/"
+        id="popup-open"
+        class="mt-4 inline-block rounded bg-blue-700 px-4 py-2 text-white"
+        >Click me</a
+      >
       <h4 class="mt-4">Markup</h4>
       <p>The ids and HTML markup are required as shown.</p>
       <script type="text/plain" class="language-markup">
@@ -130,14 +146,23 @@
       </pre>
 
       <h2 class="mt-4">Toast</h2>
-      <a href="#/" id="toast-trigger" class="mt-4 rounded bg-blue-700 px-4 py-2 text-white inline-block">Click me</a>
+      <a
+        href="#/"
+        id="toast-trigger"
+        class="mt-4 inline-block rounded bg-blue-700 px-4 py-2 text-white"
+        >Click me</a
+      >
       <h4 class="mt-4">Markup</h4>
       <p>The id 'toast-trigger' is required.</p>
       <script type="text/plain" class="language-markup">
         <a href="#/" id="toast-trigger">Click me</a>
       </script>
       <h4 class="mt-4">Javascript</h4>
-      <p>Options for position include: top center, top left, top right, and bottom center, bottom left, bottom right. The available options for style are: alert, success, warn and info.</p>
+      <p>
+        Options for position include: top center, top left, top right, and
+        bottom center, bottom left, bottom right. The available options for
+        style are: alert, success, warn and info.
+      </p>
       <pre>
         <code class="language-js">
           const message = "Download Simple UI Kit as package on NPM!";
@@ -154,7 +179,12 @@
       </pre>
 
       <h2 class="mt-4">Tooltip</h2>
-      <p class="mt-4">What is a tooltip? <span class="tooltip" data-message="This is a tooltip!">Hover to find out.</span></p>
+      <p class="mt-4">
+        What is a tooltip?
+        <span class="tooltip" data-message="This is a tooltip!"
+          >Hover to find out.</span
+        >
+      </p>
       <h4 class="mt-4">Markup</h4>
       <p>The 'tooltip' class and data-message attribute are required.</p>
       <script type="text/plain" class="language-markup">
@@ -184,7 +214,9 @@
       </div>
       <h4 class="mt-4">Markup</h4>
       <p>
-        The wrapper class 'tabs' is required to be passed to the instance. The trigger class also requires a data-target attribute that corresponds to the id of the content class div.
+        The wrapper class 'tabs' is required to be passed to the instance. The
+        trigger class also requires a data-target attribute that corresponds to
+        the id of the content class div.
       </p>
       <script type="text/plain" class="language-markup">
         <div class="tabs">
@@ -211,9 +243,15 @@
           tabs.init();
         </code>
       </pre>
-      <footer class="flex justify-between pt-6 border-t mt-12">
-        <p>&copy; Joseph Masongsong 2022</p>
-        <a href="https://www.josephmasongsong.com" class="underline text-blue-700">www.josephmasongsong.com</a>
+      <footer
+        class="mt-12 flex flex-col justify-between border-t pt-6 lg:flex-row"
+      >
+        <p class="text-center lg:text-left">&copy; Joseph Masongsong 2022</p>
+        <a
+          href="https://www.josephmasongsong.com"
+          class="text-center text-blue-700 underline lg:text-right"
+          >www.josephmasongsong.com</a
+        >
       </footer>
     </main>
     <script src="/dist/main.bundle.js"></script>

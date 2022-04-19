@@ -16,21 +16,40 @@
     <title>Super Simple UI Component Library</title>
   </head>
   <body>
-    <main>
-      <nav class="flex justify-between pb-6 border-b mb-6">
-        <a class="text-2xl font-semibold" href="/">Super Simple UI</a>
-        <div>
-          <a class="px-4 border-r" href="/"><span>Home</span></a>
-          <a class="px-4 border-r" href="/docs.html"><span class="underline text-blue-700">Docs</span></a>
-          <a class="px-4" href="https://github.com/josephmasongsong/super-simple-ui" target="_blank"><span class="underline text-blue-700">GitHub</span></a>
+    <main class="px-4 lg:px-0">
+      <nav class="mb-6 flex flex-col justify-between border-b pb-6 lg:flex-row">
+        <a class="text-center text-2xl font-semibold" href="/"
+          >Super Simple UI</a
+        >
+        <div class="mx-auto mt-4 lg:ml-auto lg:mr-0 lg:mt-0">
+          <a class="border-r pr-4" href="/"><span>Home</span></a>
+          <a class="border-r px-4" href="/docs.html"
+            ><span class="text-blue-700 underline">Docs</span></a
+          >
+          <a
+            class="pl-4"
+            href="https://github.com/josephmasongsong/super-simple-ui"
+            target="_blank"
+            ><span class="text-blue-700 underline">GitHub</span></a
+          >
         </div>
       </nav>
 
       <h1>What is this?</h1>
 
-      <p class="mt-2">A ridiculously simple, tree shakeable, dependency free, vanilla javascript UI component package, that I built in my spare time as practice.</p>
+      <p class="mt-2">
+        A ridiculously simple, tree shakeable, dependency free, vanilla
+        javascript UI component package, that I built in my spare time as
+        practice.
+      </p>
 
-      <p class="mt-4">See the <a href="/umd.html" class="text-blue-700 underline">full documentation</a> for the list of components and how to use them. But first...</p>
+      <p class="mt-4">
+        See the
+        <a href="/docs.html" class="text-blue-700 underline"
+          >full documentation</a
+        >
+        for the list of components and how to use them. But first...
+      </p>
 
       <h3 class="mt-6">Install using a package manager</h3>
       <p class="mt-2">Install the package as a dependency in your project.</p>
@@ -39,7 +58,10 @@
           npm install super-simple-ui-components
         </code>
       </pre>
-      <p class="mt-4">In your Javascript file import the css and any components you will need from the package.</p>
+      <p class="mt-4">
+        In your Javascript file import the css and any components you will need
+        from the package.
+      </p>
       <pre class="mt-4">
         <code class="language-js">
           import 'super-simple-ui-components/dist/bundle.min.css';
@@ -51,7 +73,10 @@
       </pre>
 
       <h3 class="mt-6">Install using &lt;script> tag / CDN</h3>
-      <p class="mt-2">To use the package in the browser via script tag, you can download the minified script through GitHub or use the CDN.</p>
+      <p class="mt-2">
+        To use the package in the browser via script tag, you can download the
+        minified script through GitHub or use the CDN.
+      </p>
 
       <pre>
         <code class="language-markup">
@@ -67,9 +92,15 @@
           &lt;/script>
         </code>
       </pre>
-      <footer class="flex justify-between pt-6 border-t mt-12">
-        <p>&copy; Joseph Masongsong 2022</p>
-        <a href="https://www.josephmasongsong.com" class="underline text-blue-700">www.josephmasongsong.com</a>
+      <footer
+        class="mt-12 flex flex-col justify-between border-t pt-6 lg:flex-row"
+      >
+        <p class="text-center lg:text-left">&copy; Joseph Masongsong 2022</p>
+        <a
+          href="https://www.josephmasongsong.com"
+          class="text-center text-blue-700 underline lg:text-right"
+          >www.josephmasongsong.com</a
+        >
       </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
