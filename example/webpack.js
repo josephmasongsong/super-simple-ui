@@ -6,12 +6,14 @@ module.exports = {
     main: './src/main.js',
   },
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'assets/[name].bundle.js',
+    publicPath: '',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].bundle.css',
+      filename: 'assets/[name].bundle.css',
     }),
   ],
   module: {
@@ -51,6 +53,10 @@ module.exports = {
       },
       {
         test: /\.(svg|eot|ttf|woff|woff2)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],

@@ -12,7 +12,7 @@ module.exports = merge(common, {
       port: 3000,
       injectChanges: true,
       server: {
-        baseDir: ['./'],
+        baseDir: ['./src'],
       },
     }),
   ],

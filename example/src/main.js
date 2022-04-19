@@ -1,5 +1,6 @@
 import './prism-material-dark.css';
 import './main.scss';
+import './ogimage.png';
 import 'super-simple-ui-components/dist/bundle.min.css';
 
 import {
